@@ -1,4 +1,4 @@
-package designpattern.strategy.approach1.flybehaviour;
+package designpattern.structural.strategy.approach1.flybehaviour;
 
 
 public interface IFlyBehaviour {
