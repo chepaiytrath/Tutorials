@@ -12,15 +12,23 @@ public class BinarySearchTreeDemo{
 		bst.insert(20);
 		bst.insert(25);
 		
+		/*System.out.println("\nInOrder view for tree is \n");
 		bst.viewInOrder();
 		
+		System.out.println("\nPreOrder view for tree is \n");
+		bst.viewPreOrder();
+		
+		System.out.println("\nPostOrder view for tree is \n");
+		bst.viewPostOrder();
+		
 		System.out.println("Lowest number in BST is : "+bst.findMin());
-		
 		System.out.println("Highest number in BST is : "+bst.findMax());
-		
 		System.out.println("Height of BST is : "+bst.findHeight());
 		
+		System.out.println("\nBFS view for tree is \n");
+		bst.viewBFS();*/
 		
 		
+		System.out.println("BST : "+bst.checkIfBST());
 	}
 }
