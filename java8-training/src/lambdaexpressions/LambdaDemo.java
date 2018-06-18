@@ -1,3 +1,5 @@
+package lambdaexpressions;
+
 import java.util.function.*;
 
 public class LambdaDemo {

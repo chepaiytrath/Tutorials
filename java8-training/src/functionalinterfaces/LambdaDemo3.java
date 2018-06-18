@@ -1,3 +1,5 @@
+package functionalinterfaces;
+
 import java.util.function.*;
 
 public class LambdaDemo3 {
