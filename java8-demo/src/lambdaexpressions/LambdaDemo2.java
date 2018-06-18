@@ -133,7 +133,45 @@ public class LambdaDemo2 {
 		
 		
 		
+		
+		
+		
 		// Every LAMBDA is a first hand object.
+		Consumer<String> exprX = (String name) -> {
+			System.out.println("Hello " + name);
+			System.out.println("Bye " + name);
+		}; 
+		
+		Consumer<String> exprY = (String name) -> {
+			System.out.println("Hello " + name);
+			System.out.println("Bye " + name);
+		}; 
+		
+		// LambdaDemo2$$Lambda$16/558638686
+		// LambdaDemo2$$Lambda$17/1149319664
+		// Each LE is an object of Lambda : class - AnonymousInnerClass
+		
+		//For each LE, Anonymous Inner Class of Lambda type is created : 
+		// AIC : Lambda$16, Lambda$17 created inside the class file.
+		// A separate $class is not created as in the case ofregular AIC
+		System.out.println(exprX.getClass().getName());
+		System.out.println(exprY.getClass().getName());
+		
+		
+		// DIFFERENCES WITH NORMAL METHODS
+		
+		// 1. Accessing method definition with dot operator
+		// LAMBDA is an object : So it can be assigned via assignment operator to a Functional Interface OBJECT. Ex. Consumer
+		// Right side of expr1/2 : method definition. But it is actually Lambda Object.
+		// So expr1.abc() and expr2.abc() (dot operator) can be used on right side of this expression (method definition = Object)
+		// Normal methods can't be accessed with . operator as they are not objects.
+		
+	
+		// 2. NESTED FUNCTIONS 
+		// Function call within function is possible 
+		
+		// 3. SCOPE :
+		// Variable becomes final.
 		
 	}
 	
