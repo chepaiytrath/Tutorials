@@ -1,0 +1,140 @@
+CRUD Operation for TEAM
+
+1. POST : http://localhost:8080/teams
+Request
+{
+  "name": "Jammu"
+}
+
+Response
+{
+    "name": "Jammu",
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/teams/1"
+        },
+        "team": {
+            "href": "http://localhost:8080/teams/1"
+        }
+    }
+}
+
+2. GET : http://localhost:8080/teams/1
+Response
+{
+    "name": "Jammu",
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/teams/1"
+        },
+        "team": {
+            "href": "http://localhost:8080/teams/1"
+        }
+    }
+}
+
+3. PUT : http://localhost:8080/teams/1
+Request
+{
+  "name": "Orissa"
+}
+
+Response
+{
+    "name": "Orissa",
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/teams/1"
+        },
+        "team": {
+            "href": "http://localhost:8080/teams/1"
+        }
+    }
+}
+
+4. DELETE : http://localhost:8080/teams/1
+Response : 204
+
+5. ALPS 
+GET : http://localhost:8080/profile/teams
+
+Response
+{
+    "alps": {
+        "version": "1.0",
+        "descriptors": [
+            {
+                "id": "team-representation",
+                "href": "http://localhost:8080/profile/teams",
+                "descriptors": [
+                    {
+                        "name": "name",
+                        "type": "SEMANTIC"
+                    }
+                ]
+            },
+            {
+                "id": "get-teams",
+                "name": "teams",
+                "type": "SAFE",
+                "rt": "#team-representation",
+                "descriptors": [
+                    {
+                        "name": "page",
+                        "doc": {
+                            "value": "The page to return.",
+                            "format": "TEXT"
+                        },
+                        "type": "SEMANTIC"
+                    },
+                    {
+                        "name": "size",
+                        "doc": {
+                            "value": "The size of the page to return.",
+                            "format": "TEXT"
+                        },
+                        "type": "SEMANTIC"
+                    },
+                    {
+                        "name": "sort",
+                        "doc": {
+                            "value": "The sorting criteria to use to calculate the content of the page.",
+                            "format": "TEXT"
+                        },
+                        "type": "SEMANTIC"
+                    }
+                ]
+            },
+            {
+                "id": "create-teams",
+                "name": "teams",
+                "type": "UNSAFE",
+                "rt": "#team-representation"
+            },
+            {
+                "id": "get-team",
+                "name": "team",
+                "type": "SAFE",
+                "rt": "#team-representation"
+            },
+            {
+                "id": "update-team",
+                "name": "team",
+                "type": "IDEMPOTENT",
+                "rt": "#team-representation"
+            },
+            {
+                "id": "delete-team",
+                "name": "team",
+                "type": "IDEMPOTENT",
+                "rt": "#team-representation"
+            },
+            {
+                "id": "patch-team",
+                "name": "team",
+                "type": "UNSAFE",
+                "rt": "#team-representation"
+            }
+        ]
+    }
+}
