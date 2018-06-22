@@ -32,5 +32,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/jatin/.m2/repository/io/springfox/springfox-data-rest/2.7.0/springfox-data-rest-2.7.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="io.springfox"/>
+			<attribute name="maven.artifactId" value="springfox-data-rest"/>
+			<attribute name="maven.version" value="2.7.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

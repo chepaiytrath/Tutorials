@@ -1,8 +1,10 @@
 package com.demo.bs.project.repository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import com.demo.bs.project.domain.Team;
 
-@Repository
-public class TeamRepository {
+@RepositoryRestResource(path = "team", collectionResourceRel = "team")
+public interface TeamRepository extends PagingAndSortingRepository<Team, Long> {
 
 }
