@@ -32,7 +32,7 @@ public class Schedule {
 	@Column(name = "name")
 	private String name;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.PERSIST, orphanRemoval = true)
 	private List<Day> days;
 	
 }
